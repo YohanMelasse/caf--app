@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #9c7862;
+}
+
+.container {
+  height: 100%;
+}
+
+.catalog {
+  height: 20%;
+  width: 100%;
+  background-image: url("/images/958090105.png");
+  object-fit: cover;
+  border-radius: 21px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 10px 13px -7px #000000, 4px 0px 13px 6px rgba(0, 0, 0, 0.27);
+}
+.catalog p {
+  color: white;
+  text-align: center;
+  padding: 5%;
+  font-size: 2.1em;
+  font-weight: 800;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  height: 100%;
+  gap: 4%;
+  margin: 6% 6%;
+}
+
+.content {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 2%;
+  border-radius: 7px;
+  box-shadow: 0px 10px 13px -7px #000000, 4px 0px 13px 6px rgba(0, 0, 0, 0.27);
+}
+.content .discover-title {
+  font-size: 0.8em;
+  color: #785e2f;
+  margin-bottom: 2%;
+}
+.content .coffee-image {
+  width: 265px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+.content .availbility {
+  margin: 12%;
+  font-size: 1.5em;
+}
+.content .discover-btn {
+  margin-top: 3%;
+  text-decoration: none;
+  color: black;
+  background-color: #785e2f;
+  border-radius: 7px;
+  height: 10%;
+  width: 130%;
+  padding: 8%;
+  font-weight: 800;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 1200px) {
+  .coffee-image {
+    max-width: 200px;
+  }
+  .content {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .coffee-image {
+    max-width: 400px;
+  }
+  .content {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .availbility {
+    transform: translateX(-12%);
+  }
+}/*# sourceMappingURL=catalogue.css.map */

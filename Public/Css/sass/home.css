@@ -1,0 +1,173 @@
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  background-color: #9c7862;
+}
+
+.container {
+  height: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  margin: 0% 5%;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.right-container,
+.left-container {
+  width: 50%;
+}
+
+.left-container {
+  text-align: center;
+  width: 32%;
+  height: 100%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.left-container .article-title {
+  color: #785e2f;
+  font-size: 2.2em;
+}
+.left-container .home-text {
+  font-size: 1.8em;
+  margin-bottom: 4%;
+}
+.left-container .redirection-link {
+  color: black;
+  background-color: #785e2f;
+  border-radius: 7px;
+  height: 32%;
+  width: 65%;
+  text-decoration: none;
+  text-align: center;
+  padding: 8px;
+  font-weight: 700;
+  margin: auto;
+}
+
+.right-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-container .home-image {
+  height: 400px;
+  background-size: cover;
+  border-radius: 21px;
+  box-shadow: 0px 10px 13px -7px #000000, 4px 0px 13px 6px rgba(0, 0, 0, 0.27);
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  height: 50%;
+  margin: 0 5%;
+  gap: 5%;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+  background-color: white;
+  border-radius: 7px;
+  padding: 1% 1%;
+  box-shadow: 0px 10px 13px -7px #000000, 4px 0px 13px 6px rgba(0, 0, 0, 0.27);
+  width: 27%;
+  height: 76%;
+}
+.content .discover-title {
+  color: #785e2f;
+  font-size: 1.13em;
+}
+.content .coffee-image {
+  width: 425px;
+  height: 200px;
+  border-radius: 7px;
+  object-fit: cover;
+}
+.content .availbility {
+  margin: 2% 2%;
+  font-weight: 800;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 0.8em;
+}
+
+.discover-btn {
+  background-color: #785e2f;
+  color: black;
+  border-radius: 7px;
+  height: 32%;
+  width: 65%;
+  text-decoration: none;
+  text-align: center;
+  padding: 8px;
+  margin: auto;
+  font-weight: 800;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 0.7em;
+}
+
+@media screen and (max-width: 1200px) {
+  .content {
+    padding: 1px;
+  }
+  .discover-btn {
+    padding: 5px;
+    margin-bottom: 15%;
+  }
+  .coffee-image {
+    max-width: 275px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .coffee-image {
+    max-width: 235px;
+  }
+  .discover-title {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+  .coffee-image {
+    width: 120px;
+  }
+  .left-container {
+    text-align: center;
+    width: 90%;
+  }
+  footer {
+    flex-direction: column;
+    margin-top: 20%;
+  }
+  .content {
+    width: 450px;
+  }
+  .coffee-image {
+    width: 450px;
+  }
+  .availbility {
+    margin: 0 2%;
+  }
+  .group-items {
+    display: flex;
+    flex-direction: row;
+  }
+  .discover-btn {
+    width: 100px;
+  }
+  .availbility,
+  .discover-btn {
+    width: 50%;
+  }
+}/*# sourceMappingURL=home.css.map */

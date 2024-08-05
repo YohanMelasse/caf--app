@@ -1,0 +1,44 @@
+<%- include('partials/header')  %>
+<link rel="stylesheet" href="Css/sass/home.css">
+<title>O'coffee</title>
+</head>
+<body>
+
+    <div class="container">
+        <%- include('partials/nav') %>
+
+        <main>
+            <article class="left-container">
+                <h2 class="article-title">oCoffee</h2>
+                <p class="home-text">Plongez dans l'arôme envoûtant du café, 
+                où chaque gorgée réveille vos sens et transforme 
+                chaque moment en une pause précieuse.</p>
+                <a href="/catalogue" class="redirection-link">Voir le catalogue</a>
+            </article>
+            
+            <div class="right-container">
+                <img src="images/<%= homeIllustration.image %>" alt="" class="home-image">
+            </div>
+            
+        </main>
+
+        <footer>
+     
+            <% displayLastProducts.forEach(lastestProduct => { %>
+            <div class="content <%= lastestProduct.nom %>">
+                <h1 class=" discover-title"><%= lastestProduct.nom %></h1>
+                <img src="/images/<%=lastestProduct.images.toLowerCase() %>.png" alt="<%=lastestProduct.images %>" class="coffee-image" height="40px" width="40px">
+                <div class="group-items">
+                    <% if (lastestProduct.disponible  === true) { %>
+                    <p class="availbility">Disponible</p>
+                    <% } else { %>
+                    <p class="availbility">indisponible</p>
+                    <% } %>    
+                    <a href="/<%= lastestProduct.id %>" class="discover-btn">Découvrir</a>
+                </div>              
+            </div>
+            <% }) %>
+        </footer>
+    </div>
+</body>
+</html>

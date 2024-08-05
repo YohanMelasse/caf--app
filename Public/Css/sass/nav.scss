@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Quicksand:wght@300..700&display');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    color: black;
+    font-family: "Julius Sans One", sans-serif;
+}
+
+
+
+
+
+.nav-menu {
+    display: flex;
+    justify-content: space-around;
+    font-family: "Julius Sans One", sans-serif;
+    align-items: center;
+    height: 20%;
+    margin: 0% 5%;
+
+    .ocofee-logo {
+        height: 15%;
+        width: 15%;
+    }
+
+    .nav-item {
+        text-decoration: none;
+        color: black;
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+
+    .group-list-item {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+.nav-left,
+.nav-right {
+    width: 50%;
+}
+
+#nav-icon {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-35%);
+    visibility: hidden;
+}
+
+#nav-icon span {
+    height: 6px;
+    width: 36px;
+    background: black;
+    position: relative;
+    transition: 0.5s ease-in-out;
+}
+
+#nav-icon span:nth-child(1) {
+    top: 0px;
+}
+
+#nav-icon span:nth-child(2) {
+    top: 5px;
+}
+
+#nav-icon span:nth-child(3) {
+    top: 10px;
+}
+
+#nav-icon.open span:nth-child(1) {
+    top: 10px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg) translateY(-135%);
+}
+
+#nav-icon.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+#nav-icon.open span:nth-child(3) {
+    top: 10px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg) translateY(135%);
+}
+
+
+
+
+@media screen and (max-width:992px) {
+    .nav-item {
+        padding-right: 22px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-item {
+        padding: 2%;
+        font-size: 0.8em !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .nav-menu {
+        margin: 0% 1%;
+    }
+
+    #nav-icon {
+        visibility: visible;
+        transform: translateX(-13%) translateY(-160%);
+    }
+
+    .group-list-item {
+        padding-top: 6%;
+        transform: translateX(110%);
+        transition: all .6s ease-in;
+    }
+
+    .slide-show {
+        transform: translateX(3%);
+    }
+
+    .slide-out {
+        transform: translateX(110%);
+    }
+
+}

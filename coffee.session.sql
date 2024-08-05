@@ -1,0 +1,1 @@
+SELECT *  FROM cafes WHERE caracteristique_principale = 'Fruité';

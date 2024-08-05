@@ -1,0 +1,2 @@
+SELECT * FROM cafes ORDER BY id DESC LIMIT 3
+

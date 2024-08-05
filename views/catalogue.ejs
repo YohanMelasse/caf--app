@@ -1,0 +1,38 @@
+<%- include ('partials/header') %>
+<link rel="stylesheet" href="Css/sass/catalogue.css">
+<title>O'coffee</title>
+</head>
+
+<body>
+    <div class="container">
+        <%- include ('partials/nav') %>
+        
+        <div class="catalog">
+            <p>Notre Catalogue<p>
+        </div>
+        <main>
+            <% coffees.map(coffee => { %>
+            <div class="content <%= coffee.nom %>">
+                <h1 class=" discover-title"><%= coffee.nom %></h1>
+                <img src="/images/<%=coffee.images.toLowerCase() %>.png" alt="<%=coffee.images %>" class="coffee-image" width="40px" height="40px">
+                    <div class="group-items">
+                        <% if (coffee.disponible  === true) { %>
+                        <p class="availbility">Disponible</p>
+                        <% } else { %>
+                        <p class="availbility">indisponible</p>
+                        <% } %>    
+                        <a href="/<%= coffee.id %>" class="discover-btn">Découvrir</a>   
+                    </div>
+                               
+            </div>
+                
+            <% }) %>
+            
+
+        </main>
+    </div>  
+    
+</body>
+</html>
+           
+

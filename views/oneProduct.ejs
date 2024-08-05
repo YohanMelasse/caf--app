@@ -1,0 +1,33 @@
+<%- include('partials/header')  %>
+<link rel="stylesheet" href="Css/sass/oneProduct.css">
+<title>O'coffee</title>
+</head>
+<body>
+    <div class="container">
+        <%- include('partials/nav') %>
+        <main>
+        <article class="product-sheet <%= Oneproduct.images %>">
+            
+                <h1 class="discover-title"><%= Oneproduct.nom %></h1>
+                <p class="discover-product">
+                        Description:  <span><%= Oneproduct.description %></span>
+                    </p>
+                    <p class="discover-product">
+                       Caractéristiques: <span><%= Oneproduct.caracteristique_principale%></span>
+                    </p>
+                    <p class="discover-product">
+                       Origines: <span><%=Oneproduct.origine %></span>
+                    </p>
+                    <p class="discover-product">
+                       Reference: <span class="reference"><%=Oneproduct.reference%></span>
+                    </p>
+                    <p class="discover-product">
+                       Prix au kilo:<span class="price"><%=Oneproduct.prix_au_kilo%>&euro; par kilos</span>
+                    </p>  
+        </article>
+            
+        </main>
+    </div>
+  
+</body>
+</html>
